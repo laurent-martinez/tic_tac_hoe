@@ -1,10 +1,11 @@
 class Board
   attr_accessor :board_array, :letter, :number
   
-  def initialize
+  def initialize(board)
     @board_array = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @letter = ["A", "B", "C"]
     @number = [1, 2, 3]
+    board = display_board
   end
   
  #board displaying the proper board[index] in its array format
@@ -19,3 +20,6 @@ class Board
     puts "   -----------"
   end
 end
+jeux = Board.new("bonjour")
+
+puts jeux
