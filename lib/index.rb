@@ -24,5 +24,13 @@ class Index
   def get_move
     puts "Choisit une position (A1, A2.. B1, B2..)"
     print "> "
-
+    choice = STDIN.gets.chomp
+    if move(choice)
+      @@board_array[choice] = choice
+      puts "#{self.name} a prit la casse #{@@board_array[choice]}"
+    else
+      "#{choice} est occupé, Choisit un emplacement vide !!"
+      choice = STDIN.gets.chomp
+    end
+  end
 end
