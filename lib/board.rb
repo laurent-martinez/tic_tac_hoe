@@ -1,31 +1,21 @@
 class Board
-attr_accessor :alphabet_array, :numerique_array, :board_hash, :board_array
+  attr_accessor :board_array, :letter, :number
+  
   def initialize
-
-    @alphabet_array = ["A", "B", "C"]
-    @numerique_array = ["1", "2", "3"]
-    @board_array = Array.new(){Array.new()}
+    @board_array = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    @letter = ["A", "B", "C"]
+    @number = [1, 2, 3]
   end
-
-  def create_board
-
-    for letter in 0..2
-      for number in 0..2
-
-         @board_array = [@alphabet_array[letter]+ @numerique_array[number]]
-
-         print @board_array
-      end
-      puts "\n"
-    end
-  end
-
+  
+ #board displaying the proper board[index] in its array format
   def display_board
-    @board_hash.each do |key, value|
-      print "[#{key}#{value}]"
-      end
-    end
-
+    puts "    #{@letter[0]} | #{@letter[1]} | #{@letter[2]} "
+    puts "   -----------"
+    puts " #{@number[0]}| #{@board_array[0]} | #{@board_array[1]} | #{@board_array[2]} |"
+    puts "  |-----------|"
+    puts " #{@number[1]}| #{@board_array[3]} | #{@board_array[4]} | #{@board_array[5]} |"
+    puts "  |-----------|"
+    puts " #{@number[2]}| #{@board_array[6]} | #{@board_array[7]} | #{@board_array[8]} |"
+    puts "   -----------"
+  end
 end
-board = Board.new()
-board.create_board
