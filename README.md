@@ -24,3 +24,4 @@ In your terminal
 
     cd tic_tac_toe
     ruby app.rb
+
