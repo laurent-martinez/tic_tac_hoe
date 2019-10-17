@@ -16,14 +16,14 @@
 #    |   |          7 | 8 | 9             6 | 7 | 8
 
 
-board = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+board = ['A1', 'B1', 'C1', 'A2', 'B2', 'C2', 'A3', 'B3', 'C3']
 
 #board displaying the proper board[index] in its array format
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
-  puts "-----------"
+  puts  "--------------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
-  puts "-----------"
+  puts  "--------------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 display_board(board)
