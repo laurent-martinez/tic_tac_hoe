@@ -2,7 +2,7 @@ class Player
   attr_accessor :player_name, :symbole
   
   def initialize(player_name, symbole)
-    @player_name = name
+    @player_name = player_name
     @symbole = symbole
   end
 
@@ -24,5 +24,5 @@ class Player
     end
   end
 
-  
+
 end
